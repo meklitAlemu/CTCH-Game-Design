@@ -18,6 +18,7 @@ namespace AstronautPlayer
 		private Vector3 spawn;
 		public GameObject deathParticles;
 
+
 		void Start () {
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
@@ -44,7 +45,8 @@ namespace AstronautPlayer
 			transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
 
 			if(movementDirection != Vector3.zero){
-				transform.forward = movementDirection;
+				Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+				transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, turnSpeed*Time.deltaTime);
 			}
 
 			if(transform.position.y <  -2){
