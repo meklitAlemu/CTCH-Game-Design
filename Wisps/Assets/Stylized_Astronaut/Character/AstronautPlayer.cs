@@ -86,6 +86,10 @@ namespace AstronautPlayer
 				//TIP IF WE WANT TIMER DESTROY after 4sec, 
 				// Destroy(other.gameObject, 4f);
 			}
+			if (other.transform.tag == "HealthPotion"){
+				print("this is when health gets restored!");
+				Destroy(other.gameObject);
+			}
 			
 		}
 
