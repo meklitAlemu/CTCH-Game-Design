@@ -8,12 +8,12 @@ public class CameraFollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.rotation = Quaternion.Euler(25, 0, 0);
+        transform.rotation = Quaternion.Euler(45, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + new Vector3(0, 5, -10);
+        transform.position = player.transform.position + new Vector3(0, 15, -20);
     }
 }

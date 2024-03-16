@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     private Rigidbody rb;
     private Vector3 input;
-    private float maxSpeed = 5f;
+    private float maxSpeed = 8f;
     private Vector3 spawn;
     public GameObject deathParticles;
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if(rb.velocity.magnitude < maxSpeed){
             // Think of add force like push (like push )
             // rb.AddForce(input * moveSpeed);    
-            rb.AddRelativeForce(input * moveSpeed);    
+            rb.AddRelativeForce(input * moveSpeed);
         }
         // If fall off map, die
         if(transform.position.y <  -2){

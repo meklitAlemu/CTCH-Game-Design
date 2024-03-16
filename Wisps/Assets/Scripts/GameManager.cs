@@ -75,7 +75,13 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(currentLevel);
         }
         else{
-            print ("You Win!");
+            if(wispCount < totalWispCount){
+                print("Collect all samples first!");
+            }
+            else{
+                print ("You Win!");
+            }
+            
         }
     }
     public void AddWisp(){
