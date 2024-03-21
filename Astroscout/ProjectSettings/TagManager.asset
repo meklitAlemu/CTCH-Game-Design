@@ -8,6 +8,7 @@ TagManager:
   - Goal
   - Wisp
   - HealthPotion
+  - Ground
   layers:
   - Default
   - TransparentFX
